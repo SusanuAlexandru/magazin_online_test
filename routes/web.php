@@ -3,6 +3,8 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use App\Controllers\ProductController;
 use App\Controllers\CategoryController;
+use App\Controllers\UserController;
+
 
 $app->redirect('/', '/products');
 $app->get('/products', [ProductController::class, 'index']); 
@@ -22,3 +24,12 @@ $app->get('/categories/edit/{id}', [CategoryController::class, 'edit']);  // Afi
 $app->put('/categories/update/{id}', [CategoryController::class, 'update']);  // Actualizează o categorie existentă
 $app->delete('/categories/delete/{id}', [CategoryController::class, 'delete']);  // Șterge o categorie
 $app->get('/categories/show/{id}', [CategoryController::class, 'show']);  // Afișează detaliile unei categorii
+
+$app->get('/login', [UserController::class, 'login']);
+$app->get('/register', [UserController::class, 'register']);
+$app->post('/authenticate', [UserController::class, 'authenticate']);
+$app->get('/profile', [UserController::class, 'profile']);
+$app->get('/logout', [UserController::class, 'logout']);
+$app->post('/store', [UserController::class, 'store']);
+$app->get('/editPassword', [UserController::class, 'editPassword']);
+$app->post('/updatePassword', [UserController::class, 'updatePassword']);

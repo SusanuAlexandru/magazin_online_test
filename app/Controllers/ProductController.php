@@ -6,6 +6,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use App\Models\Product;
 use App\Models\Category;
+
 class ProductController
 {
     public function index(Request $request, Response $response, $args)

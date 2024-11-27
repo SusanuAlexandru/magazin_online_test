@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body>
-   
+<?php include __DIR__ . '/../users/nav.view.php'; ?>
+
+
     <div class="container my-5">
         <div class="row py-2 justify-content-center h5">
             List all products
